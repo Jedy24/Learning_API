@@ -2,12 +2,14 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center align-items-center" style="min-height: 25vh;">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.7);" >
+                <div class="card-header" style="font-weight: bold; font-family: 'Apple Chancery, cursive'; font-size: 24px; color: white;">
+                    {{ __('Status') }}
+                </div>
 
-                <div class="card-body">
+                <div class="card-body" style="color: white;">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
