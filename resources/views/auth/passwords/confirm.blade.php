@@ -2,10 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center align-items-center" style="min-height: 30vh;">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Confirm Password') }}</div>
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.7);" >
+                <div class="card-header" style="font-weight: bold; font-family: 'Apple Chancery, cursive'; font-size: 24px; color: white;">
+                    {{ __('Confirm Password') }}
+                </div>
 
                 <div class="card-body">
                     {{ __('Please confirm your password before continuing.') }}
