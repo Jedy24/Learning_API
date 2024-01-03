@@ -16,6 +16,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpeg">
+
     <style>
         body {
             background-image: url('{{ asset('images/bg.jpg') }}');
