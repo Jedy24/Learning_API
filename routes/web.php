@@ -14,16 +14,11 @@ use App\Http\Controllers\GoogleController;
 |
 */
 
-Auth::routes();
-
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('/user', [UserController::class, 'index'])->name('user.index');
-// });
-
 Route::get('/', function () {
+    return redirect()->route('login');
+});
+
+Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
