@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Exception;
 
 class FacebookController extends Controller
@@ -26,7 +27,7 @@ class FacebookController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'facebook_id'=> $user->id,
-                    'password' => encrypt('123456789')
+                    'password' => Hash::make('123456789')
                 ]);
 
                 Auth::login($newUser);
