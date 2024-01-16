@@ -43,6 +43,3 @@ Route::get('auth/github/callback', [GitHubController::class, 'githubcallback']);
 
 Route::get('auth/facebook', [FacebookController::class, 'facebookpage']);
 Route::get('auth/facebook/callback', [FacebookController::class, 'facebookcallback']);
-
-// Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
-// Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
