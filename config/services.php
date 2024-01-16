@@ -32,8 +32,20 @@ return [
     ],
 
     'google' => [
-        'client_id' => '905626299551-lb0b8tc4rg33rm7b82v544nso77mf6ii.apps.googleusercontent.com',
-        'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
+        'client_id' => env('GOOGLE_ID'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_URL'),
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_ID'),
+        'client_secret' => env('GITHUB_SECRET'),
+        'redirect' => env('GITHUB_URL'),
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_ID'),
+        'client_secret' => env('FACEBOOK_SECRET'),
+        'redirect' => env('FACEBOOK_URL'),
     ],
 ];
