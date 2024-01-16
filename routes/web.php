@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\GitHubController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\Auth\SocialiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +37,12 @@ Route::middleware([
 
 Route::get('auth/google', [GoogleController::class, 'googlepage']);
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
+
+Route::get('auth/github', [GitHubController::class, 'githubpage']);
+Route::get('auth/github/callback', [GitHubController::class, 'githubcallback']);
+
+Route::get('auth/facebook', [FacebookController::class, 'facebookpage']);
+Route::get('auth/facebook/callback', [FacebookController::class, 'facebookcallback']);
+
+// Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
+// Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
