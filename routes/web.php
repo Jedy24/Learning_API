@@ -6,6 +6,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\GitHubController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\Auth\SocialiteController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,9 +31,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 Route::get('auth/google', [GoogleController::class, 'googlepage']);

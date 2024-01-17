@@ -31,9 +31,18 @@ class FacebookController extends Controller
                 ]);
 
                 Auth::login($newUser);
-
-                return redirect()->intended('dashboard');
             }
+
+            $userData = [
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email,
+            ];
+
+            if (request()->expectsJson()) {
+                return response()->json($userData);
+            }
+
+            return redirect()->intended('dashboard')->with('userData', $userData);
         } catch (Exception $e) {
             dd($e->getMessage());
         }
